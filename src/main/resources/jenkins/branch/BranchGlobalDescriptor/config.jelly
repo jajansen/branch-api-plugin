@@ -7,6 +7,7 @@
         <f:option value="DEFAULT" selected="${descriptor.pathEncoding == 'DEFAULT'}">Default</f:option>
         <f:option value="BASE64" selected="${descriptor.pathEncoding == 'BASE64'}">Base64</f:option>
         <f:option value="STRIP" selected="${descriptor.pathEncoding == 'STRIP'}">Strip</f:option>
+        <f:option value="SHA1" selected="${descriptor.pathEncoding == 'SHA1'}">SHA1</f:option>
       </select>
     </f:entry>
   </f:section>

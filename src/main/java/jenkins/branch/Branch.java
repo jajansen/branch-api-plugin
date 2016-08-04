@@ -38,6 +38,7 @@ import jenkins.model.GlobalConfiguration;
 import jenkins.scm.api.SCMHead;
 import jenkins.scm.impl.NullSCMSource;
 
+import org.apache.commons.codec.digest.DigestUtils;
 import org.kohsuke.stapler.export.Exported;
 import org.kohsuke.stapler.export.ExportedBean;
 
@@ -130,6 +131,8 @@ public class Branch extends AbstractDescribableImpl<Branch> {
                 return DatatypeConverter.printBase64Binary(getName().getBytes("UTF-8"));
             case STRIP:
                 return stripName();
+            case SHA1:
+                return DigestUtils.sha1Hex(getName().getBytes("UTF-8"));
             default:
                 return Util.rawEncode(getName());
             }

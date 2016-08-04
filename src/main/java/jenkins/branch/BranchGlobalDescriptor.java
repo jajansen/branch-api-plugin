@@ -31,7 +31,7 @@ import jenkins.model.GlobalConfiguration;
 import net.sf.json.JSONObject;
 
 enum PathEncoding {
-    DEFAULT, BASE64, STRIP
+    DEFAULT, BASE64, STRIP, SHA1
 };
 
 @Extension
